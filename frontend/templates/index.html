@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Creation by Juan C. Pena</title>
+</head>
+<body>
+
+<h1>Server Creation by Juan C. Pena</h1>
+
+<form action="/action_page.php">
+    <label for="images"><b>Image:</b></label>
+    <select name="images" id="images">
+        {% for image in images%}
+        <option value="image">{{image}}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    </form>
+
+<form action="/action_page.php">
+    <label for="networks"><b>Network:</b></label>
+    <select name="networks" id="networks">
+        {% for network in networks%}
+        <option value="network">{{network}}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    </form>
+
+<form action="/action_page.php">
+    <label for="flavors"><b>Flavor:</b></label>
+    <select name="flavors" id="flavors">
+        {% for flavor in flavors%}
+        <option value="flavor">{{flavor}}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    </form>
+
+<form action="/action_page.php">
+    <label for="keypairs"><b>Keypair:</b></label>
+    <select name="keypairs" id="keypairs">
+        {% for keypair in keypairs%}
+        <option value="keypair">{{keypair}}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    </form>
+
+<form action="/action_page.php">
+    <label for="sgs"><b>Security group:</b></label>
+    <select name="sgs" id="sgs">
+        {% for s_group in sg%}
+        <option value="sg">{{s_group}}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    </form>
+
+<input type="button" value="Create">
+
+</body>
+</html>
